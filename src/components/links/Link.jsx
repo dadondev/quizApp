@@ -1,7 +1,6 @@
 import React from "react";
 
-function Link({ props }) {
-  console.log(props);
+function Linked({ props }) {
   return (
     <li className="md:py-2 h-10 max-w-[40px] md:max-w-[100%] md:h-auto md:px-3 bg-cyan-500 rounded-md text-white md:relative cursor-pointer">
       <span className="hidden md:block">{props.name}</span>
@@ -12,4 +11,4 @@ function Link({ props }) {
   );
 }
 
-export default Link;
+export default Linked;

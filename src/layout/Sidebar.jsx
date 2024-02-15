@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "../components/links/Link";
+import Linked from "../components/links/Link";
 const arr = [
   {
     name: "Testlar",
@@ -50,7 +50,7 @@ function Sidebar() {
       </span>
       <ul className="flex md:flex-col gap-2">
         {arr.map((e) => (
-          <Link props={e} />
+          <Linked props={e} />
         ))}
       </ul>
     </div>

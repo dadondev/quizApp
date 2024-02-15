@@ -1,7 +1,6 @@
 import React from "react";
 
 function Input({ props }) {
-  console.log(props);
   const [login, setLogin] = props.state;
   return (
     <input
