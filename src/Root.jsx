@@ -4,6 +4,8 @@ import Login from "./components/auth/Login";
 import Dashboard from "./pages/Dashboard";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import Edit from "./pages/Edit";
+import Main from "./layout/Main";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,21 @@ const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard />,
+    element: (
+      <>
+        <Dashboard />
+      </>
+    ),
+    children: [
+      {
+        path: "",
+        element: <Main />,
+      },
+      {
+        path: "edit",
+        element: <Edit />,
+      },
+    ],
   },
 ]);
 

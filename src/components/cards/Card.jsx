@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainAllLinks from "../links/MainAllLinks";
 
-const Card = ({ props }) => {
+const Card = () => {
   return (
     <div className="max-w-[250px] w-full max-h-[200px] border-[2px] border-gray-200">
       <div className="p-2 grid grid-cols-[1fr_1fr] relative gap-x-3.5 h-full grid-rows-[1fr_30px]">
@@ -17,7 +17,7 @@ const Card = ({ props }) => {
           <span className="block basis-1/4">30 ta</span>
           <span className="block basis-1/4">25 daqiqa</span>
         </div>
-        <MainAllLinks props={props.id} />
+        <MainAllLinks />
       </div>
     </div>
   );

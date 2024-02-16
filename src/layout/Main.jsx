@@ -3,6 +3,7 @@ import TestInput from "../components/inputs/TestInput";
 import tester from "../hooks/sendActiveSection";
 import State from "../hooks/state";
 import Card from "../components/cards/Card";
+import Title from "../components/title/Title";
 
 const arr = [
   {
@@ -20,17 +21,12 @@ const arr = [
 ];
 
 function Main() {
-  useEffect(() => {
-    document.getElementById("my-modal").showModal();
-  }, []);
   const handleSubmit = () => {
     console.log(tester(arr));
   };
   return (
     <div className="h-full pt-3 pl-4 grid grid-rows-[40px_1fr] gap-3">
-      <span className="inline-block max-w-32 relative flex-col text-cyan-500 border-b-[4px] border-cyan-500 text-3xl font-bold before:w-2/4 before:h-1 before:-bottom-3 before:absolute before:bg-cyan-500 before:content-[''] ">
-        Testlar
-      </span>
+      <Title props={"Testlar"} />
       <div className="flex flex-wrap justify-evenly py-2">
         <Card />
       </div>

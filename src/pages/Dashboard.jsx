@@ -1,12 +1,13 @@
 import React from "react";
-import Sidebar from "../layout/Sidebar";
 import Main from "../layout/Main";
+import Sidebar from "../layout/Sidebar";
+import { Outlet } from "react-router-dom";
 
 function Dashboard() {
   return (
-    <div className="md:grid md:grid-cols-[230px_4fr] flex flex-col-reverse h-full mx-auto">
+    <div className="md:grid md:grid-cols-[230px_4fr] flex flex-col h-full mx-auto">
       <Sidebar />
-      <Main />
+      <Outlet></Outlet>
     </div>
   );
 }

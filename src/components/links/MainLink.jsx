@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MainLink = ({ props }) => {
   return (
-    <Link>
+    <Link to={props?.to}>
       <li
         className={
           props.isRed
